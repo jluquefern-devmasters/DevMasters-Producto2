@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: devmasters-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: devmasters-app
+  ports:
+    - port: 80
+      targetPort: 8080

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devmasters-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: devmasters-app
+  template:
+    metadata:
+      labels:
+        app: devmasters-app
+    spec:
+      containers:
+      - name: devmasters-container
+        image: juanmiluque/devmasters-producto2:latest
+        ports:
+        - containerPort: 8080
