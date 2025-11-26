@@ -5,7 +5,9 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: devmasters-app
+    app: devmasters
   ports:
-    - port: 80
-      targetPort: 8080
+  - port: 80
+    targetPort: 8080
+
+
